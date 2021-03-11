@@ -56,6 +56,8 @@
     t.appendChild(t.rows[0]);
     comp_item.value = t.rows[0].cells[1].innerHTML;
     document.getElementById("tmp_sku_id").value = t.rows[0].cells[0].innerHTML;
+    document.getElementById("source").value = t.rows[0].cells[7].innerHTML;
+    document.getElementById("shop_name").value = t.rows[0].cells[4].innerHTML;
     document.getElementById("matcher").value = document.getElementById("matcher_id").value;
     try{
     var l = t.rows[0].cells[2].innerHTML.split(",")[0];//.split("[")[1].split("]")[0];
