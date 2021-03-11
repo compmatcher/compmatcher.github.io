@@ -17804,10 +17804,14 @@ const updateResult = query => {
 	let resultList = document.querySelector(".result");
 	resultList.innerHTML = "";
 	let i = 0;
+	let prev_res = "";
 	arr.map(algo =>{
 		query.split(" ").map(word =>{
 			if(algo.toLowerCase().indexOf(word.toLowerCase()) != -1 && i < 100){
+				if (prev_res != `${algo}`){
 				resultList.innerHTML += `<li class="list-group-item list-group-item-action" onclick="buttonName('${algo}')">${algo.split(' ----')[0]}</li>`;
+			}
+				prev_res = `${algo}`;
 				i += 1;
 			}
 		})
